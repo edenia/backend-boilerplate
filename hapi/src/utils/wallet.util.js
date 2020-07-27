@@ -16,9 +16,9 @@ const post = async (endpoint, body) => {
   return data
 }
 
-const create = async walletName => post('/create', `"${walletName}"`)
+const create = async (walletName) => post('/create', `"${walletName}"`)
 
-const createKey = async walletName =>
+const createKey = async (walletName) =>
   post('/create_key', `["${walletName}",""]`)
 
 // TODO: implement  get_public_keys
@@ -28,7 +28,7 @@ const listKeys = async (walletName, walletPassword) => {
   const keys = await post('/list_keys', `["${walletName}","${walletPassword}"]`)
 
   if (keys.length > 0) {
-    return keys.map(keypair => keypair[1])
+    return keys.map((keypair) => keypair[1])
   }
 
   return []
@@ -36,7 +36,7 @@ const listKeys = async (walletName, walletPassword) => {
 
 const listWallets = async () => post('/list_wallets')
 
-const lock = async walletName => post('/lock', `"${walletName}"`)
+const lock = async (walletName) => post('/lock', `"${walletName}"`)
 
 const lockAll = async () => post('/lock_all', {})
 
