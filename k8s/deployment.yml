@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: hapi
+  name: hapi
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: hapi
+  template:
+    metadata:
+      annotations:
+        linkerd.io/inject: enabled
+      labels:
+        app: hapi
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      initContainers:
+        - name: init-ipfs
+          image: busybox:1.28
+          command:
+            [
+              'sh',
+              '-c',
+              'until nc -zvw3 ipfs-cluster 5001; do echo waiting for ipfs-cluster:5001; sleep 5; done;',
+            ]
+      containers:
+        - image: ${DOCKER_REGISTRY}/${IMAGE_NAME}:${VERSION}
+          name: hapi
+          ports:
+            - containerPort: 3005
+          envFrom:
+            - secretRef:
+                name: hapi-secret
+          env:
+            - name: JUNGLE_URL
+              value: http://jungle2.cryptolions.io:80
+            - name: HASURA_URL
+              value: http://hasura:8080/v1/graphql
