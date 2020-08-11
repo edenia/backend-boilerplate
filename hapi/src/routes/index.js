@@ -1,4 +1,4 @@
 const healthzRoute = require('./healthz/healthz.route')
-const getConcentRoute = require('./get-concent/get-concent.route')
+const getConsentRoute = require('./get-consent/get-consent.route')
 
-module.exports = [healthzRoute, getConcentRoute]
+module.exports = [healthzRoute, getConsentRoute]

@@ -7,7 +7,7 @@ module.exports = async req => {
 
     return { accountName, concentStatus: false }
   } catch (error) {
-    console.error('get-concent.handler', error)
+    console.error('get-consent.handler', error)
     return Boom.boomify(error, { statusCode: BAD_REQUEST })
   }
 }
