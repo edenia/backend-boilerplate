@@ -1,5 +1,15 @@
 const { syncConfig } = require('../config')
-const { hasuraUtil, dbiometricosUtil } = require('../utils')
+const { hasuraUtil, dbiometricosUtil, itsmoUtil } = require('../utils')
+
+const CREATE = `
+  mutation ($payload: record_tracking_insert_input!) {
+    insert_record_tracking_one(object: $payload) {
+      id
+      created_at
+      updated_at
+    }
+  }
+`
 
 const FIND = `
   query ($where: record_tracking_bool_exp) {
@@ -23,6 +33,12 @@ const UPDATE = `
   }
 `
 
+const create = async payload => {
+  const data = await hasuraUtil.request(CREATE, { payload })
+
+  return data
+}
+
 const find = async where => {
   const data = await hasuraUtil.request(FIND, { where })
 
@@ -36,10 +52,12 @@ const update = async (where, set) => {
 }
 
 const sync = async () => {
-  const pendingRecords = await find({ hash_result: { _is_null: true } })
+  const pendingRecords = await itsmoUtil.getPendingRecords()
   console.log(`${pendingRecords.length} pending records`)
+
   for (let index = 0; index < pendingRecords.length; index++) {
-    const record = pendingRecords[index]
+    const { id, ...record } = pendingRecords[index]
+
     try {
       const {
         transaction_id: transactionId
@@ -48,8 +66,12 @@ const sync = async () => {
         syncConfig.accountPassword,
         record
       )
-      await update({ id: { _eq: record.id } }, { hash_result: transactionId })
-      console.log(`record.id ${record.id} was processed`)
+      await create(
+        { id: { _eq: record.id } },
+        { ...record, hash_result: transactionId }
+      )
+      await itsmoUtil.setHash(id, transactionId)
+      console.log(`record.id ${id} was processed`)
     } catch (error) {
       console.log(`error processing record.id ${record.id} `)
       console.error('record-tracking.service.sync', error)
@@ -58,6 +80,7 @@ const sync = async () => {
 }
 
 module.exports = {
+  create,
   find,
   update,
   sync
