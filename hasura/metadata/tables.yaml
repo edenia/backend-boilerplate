@@ -1,3 +1,15 @@
 - table:
     schema: public
     name: record_tracking
+  select_permissions:
+  - role: guest
+    permission:
+      columns:
+      - id
+      - json_data
+      - hash_result
+      - created_at
+      - updated_at
+      - user_reference
+      - project_id
+      filter: {}
