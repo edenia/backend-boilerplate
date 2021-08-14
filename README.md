@@ -77,39 +77,6 @@ Somethings you need before getting started:
 2.  Move to the appropriate directory: `cd <YOUR_PROJECT_NAME>`.
 3.  Copy the `.env.example` then update the environment variables according to your needs
 
-```
-# global
-STAGE=dev
-APP_NAME=eoscr-backend-boilerplate
-
-# wallet
-WALLET_DATA=./wallet_data
-
-# postgres
-POSTGRES_USER=eoscr
-POSTGRES_PASSWORD=password
-POSTGRES_DB=localdb
-POSTGRES_DATA=./db_data
-
-# hasura
-HASURA_GRAPHQL_ENABLE_CONSOLE=true
-HASURA_GRAPHQL_DATABASE_URL=postgres://eoscr:password@postgres:5432/localdb
-HASURA_GRAPHQL_ADMIN_SECRET=myadminsecretkey
-HASURA_GRAPHQL_UNAUTHORIZED_ROLE=guest
-
-# hapi
-HAPI_EOS_API_ENDPOINT=https://jungle2.eosio.cr
-HAPI_EOS_API_CHAIN_ID=e70aaab8997e1dfce58fbfac80cbbb8fecec7b99cf982a9444273cbc64c41473
-HAPI_EOS_BASE_ACCOUNT=baseaccount
-HAPI_EOS_BASE_ACCOUNT_PASSWORD=PW...
-HAPI_EOS_WALLET_URL=http://wallet:8888
-HAPI_HASURA_URL=http://hasura:8080/v1/graphql
-HAPI_HASURA_ADMIN_SECRET=myadminsecretkey
-HAPI_SERVER_PORT=9090
-HAPI_SERVER_ADDRESS=hapi
-
-```
-
 ### Quick start
 
 At this point you can run `make run`, you can check the services runing on:
@@ -126,69 +93,6 @@ MIT © [EOS Costa Rica](https://eoscostarica.io)
 Please Read EOS Costa Rica's [Open Source Contributing Guidelines](https://developers.eoscostarica.io/docs/open-source-guidelines).
 
 Please report bugs big and small by [opening an issue](https://github.com/eoscostarica/backend-boilerplate/issues)
-
-## Contributors
-
-Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
-
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/xavier506">
-        <img src="https://avatars0.githubusercontent.com/u/5632966?v=4" width="100px;" alt="Xavier Fernandez"/>
-        <br />
-        <sub>
-          <b>
-            Xavier Fernandez
-          </b>
-        </sub>
-      </a>
-      <br />
-      🤔📝📢🚇
-    </td>
-    <td align="center">
-      <a href="https://github.com/tetogomez">
-        <img src="https://avatars3.githubusercontent.com/u/10634375?s=460&v=4" width="100px;" alt="Teto Gomez"/>
-        <br />
-        <sub>
-          <b>
-            Teto Gomez
-          </b>
-        </sub>
-      </a>
-      <br />
-      🤔💻👀
-    </td>
-    <td align="center">
-      <a href="https://github.com/adriexnet">
-        <img src="https://avatars3.githubusercontent.com/u/13205620?s=400&u=9adad6d2e42165c184894b9175785d15a903f58b&v=4" width="100px;" alt="Adriel Diaz"/>
-        <br />
-        <sub>
-          <b>
-            Rubén Abarca Navarro
-          </b>
-        </sub>
-      </a>
-      <br />
-      📃💻😎
-    </td>
-    <td align="center">
-      <a href="https://github.com/adriexnet">
-        <img src="https://avatars3.githubusercontent.com/u/5375168?s=460&u=542a27a00b761d98851991c6a6d5f78d7b35a2b2&v=4" width="100px;" alt="Adriel Diaz"/>
-        <br />
-        <sub>
-          <b>
-            Adriel Diaz
-          </b>
-        </sub>
-      </a>
-      <br />
-      🏡💻❤️
-    </td>
-  </tr>
-</table>
-
-This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!
 
 ## About EOS Costa Rica
 

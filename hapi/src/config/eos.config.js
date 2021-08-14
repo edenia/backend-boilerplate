@@ -1,7 +1,7 @@
 module.exports = {
-  apiEndpoint: process.env.EOS_API_ENDPOINT,
-  chainId: process.env.EOS_API_CHAIN_ID,
-  baseAccount: process.env.EOS_BASE_ACCOUNT,
-  baseAccountPassword: process.env.EOS_BASE_ACCOUNT_PASSWORD,
-  walletUrl: process.env.EOS_WALLET_URL
+  endpoint: process.env.HAPI_NETWORK_API,
+  chainId: process.env.HAPI_NETWORK_CHAIN_ID,
+  baseAccount: process.env.HAPI_NETWORK_BASE_ACCOUNT,
+  baseAccountPassword: process.env.HAPI_NETWORK_BASE_PASSWORD,
+  walletUrl: process.env.HAPI_NETWORK_WALLET_URL
 }
