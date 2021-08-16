@@ -31,13 +31,13 @@ Within the download you'll find the following directories and files:
 eoscrbackendboilerplate/
 ├── hasura
 │ ├── migrations
-│ └── config.ymal
+│ └── config.yaml
 ├── hapi
 │ ├── src
 │ | ├── config
 │ | ├── api
 │ | ├── routes
-│ | └── config.ymal
+│ | └── config.yaml
 │ ├── .dockerignore
 │ ├── .eslintrc
 │ ├── .prettierrc

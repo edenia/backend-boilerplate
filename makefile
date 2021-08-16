@@ -64,8 +64,10 @@ install:
 
 clean:
 	@docker-compose stop
-	@rm -rf tmp/postgres
+	@rm -rf tmp/db_data
 	@rm -rf tmp/hapi
+	@rm -rf hapi/node_modules
+	@rm -rf tmp/wallet
 	@docker system prune
 
 build-kubernetes: ##@devops Generate proper k8s files based on the templates
