@@ -8,7 +8,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/index.js",
     "watch": "nodemon --enable-source-maps src/index.js",
-    "lint": "lint-staged",
     "prepare": "cd .. && husky install hapi/.husky"
   },
   "license": "MIT",
