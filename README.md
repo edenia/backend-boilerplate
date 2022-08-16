@@ -1,14 +1,15 @@
-# EOSCR Backend Boilerplate
+<div align="center">
+	<a href="https://eoscostarica.io">
+		<img src="https://raw.githubusercontent.com/eoscostarica/.github/master/.github/workflows/images/eos-costa-rica-logo.png" width="300">
+	</a>
 
-[![N|Solid](https://github.com/eoscostarica/eos-rate/raw/master/docs/eoscostarica-logo-black.png)](https://eoscostarica.io/)
+![](https://img.shields.io/github/license/eoscostarica/backend-boilerplate) ![](https://img.shields.io/badge/code%20style-standard-brightgreen.svg) ![](https://img.shields.io/badge/%E2%9C%93-collaborative_etiquette-brightgreen.svg) ![](https://img.shields.io/twitter/follow/eoscostarica.svg?style=social&logo=twitter) ![](https://img.shields.io/github/forks/eoscostarica/backend-boilerplate?style=social)
 
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) ![GitHub](https://img.shields.io/github/license/eoscostarica/backend-boilerplate) ![GitHub repo size](https://img.shields.io/github/repo-size/eoscostarica/backend-boilerplate) ![Twitter Follow](https://img.shields.io/twitter/follow/eoscostarica?style=social) ![GitHub forks](https://img.shields.io/github/forks/eoscostarica/backend-boilerplate?style=social)
+</div>
 
-A highly scalable skeleton with best practices, ideal for backend projects quick start
+# EOSIO Backend Boilerplate
 
-## Version
-
-- 0.1.0
+**A highly scalable skeleton with best practices, ideal for backend projects quick start.**
 
 ## Features!
 
@@ -63,15 +64,17 @@ There are some important folders like
 
 Basic knowledge about Docker, Docker Compose and NodeJS is required.
 
-### Before to start
+### Getting started
 
-Somethings you need before getting started:
+Some things you need before getting started:
 
 - [git](https://git-scm.com/)
 - [node.js](https://nodejs.org/es/)
+- [docker](https://www.docker.com/)
+- [docker-compose](https://docs.docker.com/compose/)
 - [Hasura CLI](https://hasura.io/docs/1.0/graphql/manual/hasura-cli/install-hasura-cli.html#install-hasura-cli)
 
-### First time
+### Running for the first time
 
 1.  Clone this repo using `git clone --depth=1 https://github.com/eoscostarica/backend-boilerplate.git <YOUR_PROJECT_NAME>`
 2.  Move to the appropriate directory: `cd <YOUR_PROJECT_NAME>`.
@@ -79,14 +82,11 @@ Somethings you need before getting started:
 
 ### Quick start
 
-At this point you can run `make run`, you can check the services runing on:
+At this point you can execute `make run`, you can check the services runing on:
 
 - hapi at http://localhost:9090
 - hasura at http://localhost:9695
 
-## License
-
-MIT © [EOS Costa Rica](https://eoscostarica.io)
 
 ## Contributing
 
@@ -96,13 +96,18 @@ Please report bugs big and small by [opening an issue](https://github.com/eoscos
 
 ## About EOS Costa Rica
 
-<p align="center">
-	<a href="https://eoscostarica.io">
-		<img src="https://github.com/eoscostarica/eos-rate/raw/master/docs/eoscostarica-logo-black.png" width="300">
-	</a>
-</p>
-<br/>
+<span align="center">
 
-EOS Costa Rica is an independently-owned, self-funded, bare-metal Genesis block producer that provides stable and secure infrastructure for EOSIO blockchains. We support open source software for our community while offering enterprise solutions and custom smart contract development for our clients.
+<a href="https://eoscostarica.io"><img width="300" alt="image" src="https://raw.githubusercontent.com/eoscostarica/.github/master/.github/workflows/images/eos-costa-rica-logo.png"></img></a>
 
-[eoscostarica.io](https://eoscostarica.io) Support OpenSource!
+[![Twitter](https://img.shields.io/twitter/follow/EOSCostaRica?style=for-the-badge)](https://twitter.com/EdeniaWeb3)
+[![Discord](https://img.shields.io/discord/946500573677625344?color=black&label=Discord&logo=discord&logoColor=white&style=for-the-badge)](https://discord.gg/YeGcF6QwhP)
+
+
+
+EOS Costa Rica is an independently-owned, self-funded, bare-metal Genesis block producer that provides stable and secure infrastructure for the EOS mainnet. We support open source software for our community while offering enterprise solutions and custom smart contract development for our clients.
+
+<!-- ![Metrics](/profile/metrics.svg) -->
+
+</span>
+
