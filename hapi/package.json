@@ -10,6 +10,12 @@
     "watch": "nodemon --enable-source-maps src/index.js",
     "prepare": "cd .. && husky install hapi/.husky"
   },
+  "lint-staged": {
+    "*.js": [
+      "eslint",
+      "prettier --write"
+    ]
+  },
   "license": "MIT",
   "dependencies": {
     "@hapi/boom": "^10.0.0",
