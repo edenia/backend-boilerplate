@@ -1,4 +1,4 @@
-FROM hasura/graphql-engine:v2.0.6.cli-migrations-v3
+FROM hasura/graphql-engine:v2.11.0-beta.1.cli-migrations-v3
 
 ENV HASURA_GRAPHQL_MIGRATIONS_DIR /hasura-migrations
 ENV HASURA_GRAPHQL_METADATA_DIR /hasura-metadata
@@ -13,4 +13,4 @@ EXPOSE $HASURA_PORT
 
 CMD graphql-engine \
   serve \
-  --database-url $HASURA_GRAPHQL_DATABASE_URL 
+  --database-url $HASURA_GRAPHQL_DATABASE_URL
